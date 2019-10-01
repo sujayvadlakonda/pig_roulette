@@ -34,7 +34,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jOt-4H-faP" kind="presentation" id="gZZ-hi-R66"/>
+                                    <segue destination="jOt-4H-faP" kind="presentation" id="RFu-B5-Y8D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,25 +98,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-0h-pKf">
-                                <rect key="frame" x="71" y="161" width="30" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="0">
-                                        <attributes>
-                                            <font key="NSFont" size="49" name="Avenir-Heavy"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiI-oq-fvv">
-                                <rect key="frame" x="299" y="161" width="30" height="67"/>
+                                <rect key="frame" x="270" y="161" width="88" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="0">
+                                    <fragment content="100">
                                         <attributes>
                                             <font key="NSFont" size="49" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -160,7 +149,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="rollPress:" destination="jOt-4H-faP" eventType="touchUpInside" id="4Xo-4p-G6t"/>
+                                    <action selector="rollPress:" destination="jOt-4H-faP" eventType="touchUpInside" id="c1I-zQ-Pin"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-yt-0Kp">
@@ -168,9 +157,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.19234102210000001" green="0.31663142509999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="End">
+                                <state key="normal" title="Next Player">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextPlayer:" destination="jOt-4H-faP" eventType="touchUpInside" id="Ie5-AZ-hdu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjK-YV-ylZ">
                                 <rect key="frame" x="56" y="787" width="304" height="42"/>
@@ -193,22 +185,35 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-0h-pKf">
+                                <rect key="frame" x="42" y="161" width="88" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="100">
+                                        <attributes>
+                                            <font key="NSFont" size="49" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UXD-oR-Nbs"/>
                     </view>
                     <connections>
-                        <outlet property="dice1" destination="tmy-gU-cpu" id="U37-Xb-BaU"/>
-                        <outlet property="dice2" destination="mi2-aS-lLP" id="Gc8-LR-lTw"/>
-                        <outlet property="dice3" destination="xsY-dn-Mab" id="nhp-7s-7zt"/>
-                        <outlet property="dice4" destination="WOO-aO-te0" id="YKf-Ln-fmx"/>
-                        <outlet property="endButton" destination="Ofc-yt-0Kp" id="6rp-Tq-iOd"/>
-                        <outlet property="leaderboardButton" destination="NjK-YV-ylZ" id="QJt-cr-bs9"/>
-                        <outlet property="messageDisplay" destination="gfU-rc-KjE" id="h2l-Nd-U5s"/>
-                        <outlet property="rollButton" destination="irw-AX-fEd" id="V5U-TM-adZ"/>
-                        <outlet property="roundPoints" destination="hiI-oq-fvv" id="5zO-uq-d4w"/>
-                        <outlet property="title" destination="rmD-Aw-xBy" id="aYz-Rm-ITk"/>
-                        <outlet property="totalPoints" destination="JOe-0h-pKf" id="QR3-h4-546"/>
+                        <outlet property="dice1" destination="tmy-gU-cpu" id="dQ5-AN-aBT"/>
+                        <outlet property="dice2" destination="mi2-aS-lLP" id="Gk1-Qz-bIO"/>
+                        <outlet property="dice3" destination="xsY-dn-Mab" id="TfW-3e-2pq"/>
+                        <outlet property="dice4" destination="WOO-aO-te0" id="3M4-sI-xNo"/>
+                        <outlet property="endButton" destination="Ofc-yt-0Kp" id="ZLb-bk-Ler"/>
+                        <outlet property="leaderboardButton" destination="NjK-YV-ylZ" id="kTo-wz-h5j"/>
+                        <outlet property="messageDisplay" destination="gfU-rc-KjE" id="CFn-pD-ULO"/>
+                        <outlet property="playerTitle" destination="rmD-Aw-xBy" id="ZqN-hU-g0C"/>
+                        <outlet property="rollButton" destination="irw-AX-fEd" id="ZrT-8c-fPI"/>
+                        <outlet property="roundPoints" destination="hiI-oq-fvv" id="fof-AS-kC5"/>
+                        <outlet property="totalPoints" destination="JOe-0h-pKf" id="9Vt-Nn-7da"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WB-rB-GAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
