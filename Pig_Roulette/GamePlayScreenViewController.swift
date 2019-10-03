@@ -106,4 +106,8 @@ class GamePlayScreenViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as! LeaderboardViewController).currentGame = game
+    }
+    
 }
