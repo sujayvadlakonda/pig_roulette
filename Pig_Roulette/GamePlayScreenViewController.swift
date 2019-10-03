@@ -21,17 +21,22 @@ class GamePlayScreenViewController: UIViewController {
     @IBOutlet weak var rollButton: UIButton!
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var leaderboardButton: UIButton!
-
-    let game = PigGame(numberOfPlayers: 4, goalPoints: 100, maxDice: 4)
+    @IBOutlet weak var dicePicker: UISegmentedControl!
+    
+    var game = PigGame(numberOfPlayers: 4, goalPoints: 100, maxDice: 4)
     var numRoundPoints = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        dicePicker.removeAllSegments()
+        for i in 1...game.maxDice {
+            dicePicker.insertSegment(withTitle: String(i), at: i-1, animated: true)
+        }
         resetUI()
     }
 
     @IBAction func rollPress(_ sender: Any) {
-        for dieNum in 1...(game.maxDice) {
+        for dieNum in 1...(dicePicker.selectedSegmentIndex+1) {
             let val = game.roll()
             if (dieNum == 1) {
                 dice1.image = rolImages(rolledNum: val)
@@ -78,6 +83,7 @@ class GamePlayScreenViewController: UIViewController {
         dice2.image = nil
         dice3.image = nil
         dice4.image = nil
+        dicePicker.selectedSegmentIndex = 0
         messageDisplay.text = "Go ahead and roll, \(game.players[game.currentPlayer].name)"
     }
 
