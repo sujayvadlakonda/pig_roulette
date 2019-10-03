@@ -11,6 +11,8 @@ import UIKit
 class GameSetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     
+    @IBOutlet weak var maxDice: UISegmentedControl!
+    @IBOutlet weak var numPlayers: UISegmentedControl!
     @IBOutlet var pointPicker: UIPickerView!
     var pointPickerData: [Int] = [Int]()
     
@@ -47,5 +49,6 @@ class GameSetupViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        (segue.destination as! GamePlayScreenViewController).game = PigGame(numberOfPlayers: numPlayers.selectedSegmentIndex + 2, goalPoints: pointPickerData[pointPicker.selectedRow(inComponent: 0)], maxDice: maxDice.selectedSegmentIndex + 1)
     }
 }
