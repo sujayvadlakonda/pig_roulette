@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C20AAD01233E51BD004B1248 /* GameSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */; };
 		7A3D2AE9233E5044003DCED1 /* GamePlayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D2AE8233E5044003DCED1 /* GamePlayScreenViewController.swift */; };
 		7ACF9E72233BB4BF002C2D70 /* GameClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF9E71233BB4BF002C2D70 /* GameClass.swift */; };
+		C20AAD01233E51BD004B1248 /* GameSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */; };
 		C28697D5233912F800885A42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28697D4233912F800885A42 /* AppDelegate.swift */; };
 		C28697D7233912F800885A42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28697D6233912F800885A42 /* ViewController.swift */; };
 		C28697DA233912F800885A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28697D8233912F800885A42 /* Main.storyboard */; };
@@ -18,9 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupViewController.swift; sourceTree = "<group>"; };
 		7A3D2AE8233E5044003DCED1 /* GamePlayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayScreenViewController.swift; sourceTree = "<group>"; };
 		7ACF9E71233BB4BF002C2D70 /* GameClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClass.swift; sourceTree = "<group>"; };
+		C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupViewController.swift; sourceTree = "<group>"; };
 		C28697D1233912F800885A42 /* Pig_Roulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pig_Roulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28697D4233912F800885A42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28697D6233912F800885A42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -295,13 +295,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8D9GPD358B;
+				DEVELOPMENT_TEAM = 2QJ6LH5542;
 				INFOPLIST_FILE = Pig_Roulette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sujayvadlakonda.Pig-Roulette";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.srujan.Pig-Roulette";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,13 +313,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8D9GPD358B;
+				DEVELOPMENT_TEAM = 2QJ6LH5542;
 				INFOPLIST_FILE = Pig_Roulette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sujayvadlakonda.Pig-Roulette";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.srujan.Pig-Roulette";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
