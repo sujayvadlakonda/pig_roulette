@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DYA-Cp-j7r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DYA-Cp-j7r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,7 +69,7 @@
             <objects>
                 <viewController title="Game Setup" id="c27-oK-9Qe" customClass="GameSetupViewController" customModule="Pig_Roulette" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vXm-QX-bc2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb8-uP-mTE">
@@ -170,7 +168,7 @@
             <objects>
                 <viewController title="GamePlayScreen" id="jOt-4H-faP" customClass="GamePlayScreenViewController" customModule="Pig_Roulette" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iFg-Kk-dki">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxy-NF-1dP">
@@ -324,10 +322,24 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0T-Yc-2mQ">
+                                <rect key="frame" x="130" y="648" width="143" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19234102210000001" green="0.31663142509999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Game Over">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollPress:" destination="jOt-4H-faP" eventType="touchUpInside" id="KTE-13-QTT"/>
+                                    <segue destination="o1v-7p-WXm" kind="show" id="cNw-Ru-t9d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UXD-oR-Nbs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fCs-Ka-i30"/>
                     <connections>
                         <outlet property="dice1" destination="tmy-gU-cpu" id="dQ5-AN-aBT"/>
                         <outlet property="dice2" destination="mi2-aS-lLP" id="Gk1-Qz-bIO"/>
@@ -335,6 +347,7 @@
                         <outlet property="dice4" destination="WOO-aO-te0" id="3M4-sI-xNo"/>
                         <outlet property="dicePicker" destination="Efl-eb-dXT" id="Kvd-QO-GNa"/>
                         <outlet property="endButton" destination="Ofc-yt-0Kp" id="ZLb-bk-Ler"/>
+                        <outlet property="gameOverButton" destination="I0T-Yc-2mQ" id="2Dm-Zj-W9W"/>
                         <outlet property="leaderboardButton" destination="NjK-YV-ylZ" id="kTo-wz-h5j"/>
                         <outlet property="messageDisplay" destination="gfU-rc-KjE" id="CFn-pD-ULO"/>
                         <outlet property="playerTitle" destination="rmD-Aw-xBy" id="ZqN-hU-g0C"/>
@@ -352,7 +365,7 @@
             <objects>
                 <viewController id="G6Y-7z-k6d" customClass="LeaderboardViewController" customModule="Pig_Roulette" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vy6-AO-65T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player One: 37 Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAA-mP-w0r">
@@ -394,6 +407,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nV3-LV-ozb"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oyz-rl-qLs"/>
                     <connections>
                         <outlet property="labelFour" destination="P0W-9N-utw" id="8SB-s1-nx3"/>
                         <outlet property="labelOne" destination="Mu5-Hm-2Ns" id="j4r-71-W7J"/>
@@ -443,7 +457,7 @@ Good Luck!
             <objects>
                 <viewController id="o1v-7p-WXm" customClass="GameOverViewController" customModule="Pig_Roulette" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RO4-GF-2wv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player X Won!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoy-ke-fhB">
@@ -457,14 +471,6 @@ Good Luck!
                                 <rect key="frame" x="67" y="177" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW8-34-RhM">
-                                <rect key="frame" x="148" y="444" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Again?"/>
-                                <connections>
-                                    <segue destination="jOt-4H-faP" kind="show" id="Crk-IM-TKT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNq-gR-ERa">
                                 <rect key="frame" x="150" y="522" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -484,6 +490,7 @@ Good Luck!
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ODu-jV-pxG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="23b-fq-SEl"/>
                     <connections>
                         <outlet property="playerWonText" destination="yoy-ke-fhB" id="crJ-D1-cd5"/>
                         <outlet property="pointsText" destination="7WT-E7-T06" id="3Qc-22-BBT"/>
@@ -499,7 +506,6 @@ Good Luck!
         <image name="pigrouletteimage" width="93" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RLC-rc-9wP"/>
-        <segue reference="XIr-2k-PJi"/>
+        <segue reference="APK-7w-RT6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C20AAD01233E51BD004B1248 /* GameSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */; };
 		7A3D2AE9233E5044003DCED1 /* GamePlayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D2AE8233E5044003DCED1 /* GamePlayScreenViewController.swift */; };
 		7ACF9E72233BB4BF002C2D70 /* GameClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF9E71233BB4BF002C2D70 /* GameClass.swift */; };
+		C20AAD01233E51BD004B1248 /* GameSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */; };
 		C28697D5233912F800885A42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28697D4233912F800885A42 /* AppDelegate.swift */; };
 		C28697D7233912F800885A42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28697D6233912F800885A42 /* ViewController.swift */; };
 		C28697DA233912F800885A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28697D8233912F800885A42 /* Main.storyboard */; };
 		C28697DC233912FA00885A42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28697DB233912FA00885A42 /* Assets.xcassets */; };
 		C28697DF233912FA00885A42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28697DD233912FA00885A42 /* LaunchScreen.storyboard */; };
+		E22B5326234AAF9E00D93AC5 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B5325234AAF9E00D93AC5 /* LeaderboardViewController.swift */; };
+		E22B5328234AAFBF00D93AC5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B5327234AAFBF00D93AC5 /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupViewController.swift; sourceTree = "<group>"; };
 		7A3D2AE8233E5044003DCED1 /* GamePlayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayScreenViewController.swift; sourceTree = "<group>"; };
 		7ACF9E71233BB4BF002C2D70 /* GameClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClass.swift; sourceTree = "<group>"; };
+		C20AAD00233E51BD004B1248 /* GameSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupViewController.swift; sourceTree = "<group>"; };
 		C28697D1233912F800885A42 /* Pig_Roulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pig_Roulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28697D4233912F800885A42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28697D6233912F800885A42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		C28697DB233912FA00885A42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28697DE233912FA00885A42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28697E0233912FA00885A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E22B5325234AAF9E00D93AC5 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		E22B5327234AAFBF00D93AC5 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		C28697D3233912F800885A42 /* Pig_Roulette */ = {
 			isa = PBXGroup;
 			children = (
+				E22B5327234AAFBF00D93AC5 /* GameOverViewController.swift */,
+				E22B5325234AAF9E00D93AC5 /* LeaderboardViewController.swift */,
 				C28697D4233912F800885A42 /* AppDelegate.swift */,
 				C28697D6233912F800885A42 /* ViewController.swift */,
 				C28697D8233912F800885A42 /* Main.storyboard */,
@@ -148,6 +154,8 @@
 				7ACF9E72233BB4BF002C2D70 /* GameClass.swift in Sources */,
 				C28697D7233912F800885A42 /* ViewController.swift in Sources */,
 				C20AAD01233E51BD004B1248 /* GameSetupViewController.swift in Sources */,
+				E22B5328234AAFBF00D93AC5 /* GameOverViewController.swift in Sources */,
+				E22B5326234AAF9E00D93AC5 /* LeaderboardViewController.swift in Sources */,
 				C28697D5233912F800885A42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

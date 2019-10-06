@@ -22,6 +22,7 @@ class GamePlayScreenViewController: UIViewController {
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var leaderboardButton: UIButton!
     @IBOutlet weak var dicePicker: UISegmentedControl!
+    @IBOutlet var gameOverButton: UIButton!
     
     var game = PigGame(numberOfPlayers: 4, goalPoints: 100, maxDice: 4)
     var numRoundPoints = 0
@@ -32,6 +33,7 @@ class GamePlayScreenViewController: UIViewController {
         for i in 1...game.maxDice {
             dicePicker.insertSegment(withTitle: String(i), at: i-1, animated: true)
         }
+        gameOverButton.isHidden = true
         resetUI()
     }
 
@@ -59,6 +61,7 @@ class GamePlayScreenViewController: UIViewController {
             numRoundPoints += val
             roundPoints.text = String(numRoundPoints)
         }
+        
     }
 
     @IBAction func nextPlayer(_ sender: Any) {
@@ -67,7 +70,8 @@ class GamePlayScreenViewController: UIViewController {
     
     func nextPlayer() {
         if (game.updatePlayer(earnedPoints: numRoundPoints)) {
-            // winner screen, pass current player object
+            gameOverButton.isHidden = false
+            messageDisplay.isHidden = true
         } else {
             game.nextPlayer()
             resetUI()
@@ -112,7 +116,11 @@ class GamePlayScreenViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as! LeaderboardViewController).currentGame = game
+        if (segue.destination is LeaderboardViewController) {
+            (segue.destination as! LeaderboardViewController).currentGame = game
+        } else {
+            (segue.destination as! GameOverViewController).winningPlayer = game.players[game.currentPlayer]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
