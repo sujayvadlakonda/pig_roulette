@@ -22,7 +22,7 @@ class LeaderboardViewController: UIViewController {
         
         let numPlayers : Int = currentGame.players.count
         var players = currentGame.players
-        players.sort(by: {$0.points < $1.points}) //Increasing Order Sort
+        players.sort(by: {$0.points > $1.points}) //Increasing Order Sort
         
         //Displays Leaderboard Labels
         var labels : [UILabel] = [UILabel]()

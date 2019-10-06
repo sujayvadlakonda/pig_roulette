@@ -36,6 +36,7 @@ class GamePlayScreenViewController: UIViewController {
     }
 
     @IBAction func rollPress(_ sender: Any) {
+        resetDice()
         for dieNum in 1...(dicePicker.selectedSegmentIndex+1) {
             let val = game.roll()
             if (dieNum == 1) {
@@ -79,12 +80,16 @@ class GamePlayScreenViewController: UIViewController {
         playerTitle.text = "\(game.players[game.currentPlayer].name)'s Turn"
         totalPoints.text = "\(game.players[game.currentPlayer].points)"
         roundPoints.text = "0"
+        resetDice()
+        dicePicker.selectedSegmentIndex = 0
+        messageDisplay.text = "Go ahead and roll, \(game.players[game.currentPlayer].name)"
+    }
+    
+    func resetDice() {
         dice1.image = nil
         dice2.image = nil
         dice3.image = nil
         dice4.image = nil
-        dicePicker.selectedSegmentIndex = 0
-        messageDisplay.text = "Go ahead and roll, \(game.players[game.currentPlayer].name)"
     }
 
     func rolImages(rolledNum: Int) -> UIImage {
@@ -104,6 +109,20 @@ class GamePlayScreenViewController: UIViewController {
         default:
             return UIImage(named: "face1")!
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as! LeaderboardViewController).currentGame = game
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
 }
